@@ -16,18 +16,16 @@
 			<p:outputLabel value="Login" for="login" />
 			<p:inputText id="login" value="#{cadastroUsuarioBean.login}" required="true">
 				<p:ajax listener="#{cadastroUsuarioBean.verificarDisponibilidadeLogin}" 
-					event="change" process="@all" />
+					event="change" process="@this" />
 			</p:inputText>
 			
 			<p:outputLabel value="Nome" for="nome" />
 			<p:inputText id="nome" value="#{cadastroUsuarioBean.nome}" required="true" /> 
 		</p:panelGrid>
 		
-		<p:commandButton value="Cadastrar" action="#{cadastroUsuarioBean.cadastrar}" process="@all"/>
+		<p:commandButton value="Cadastrar" action="#{cadastroUsuarioBean.cadastrar}" />
 		
 	</h:form>
-	
-	
-	
+
 </h:body>
 </html>
